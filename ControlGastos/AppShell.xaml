@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ControlGastos.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ControlGastos"
+    Title="Control de Gastos">
+
+    <TabBar>
+        <ShellContent
+            Title="Gastos"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Resumen"
+            ContentTemplate="{DataTemplate local:ResumenPage}"
+            Route="ResumenPage" />
+    </TabBar>
+
+</Shell>

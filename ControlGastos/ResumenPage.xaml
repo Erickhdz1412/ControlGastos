@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGastos.ResumenPage"
+             Title="Resumen"
+             Appearing="OnPageAppearing">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label Text="Gastos por categoría" FontSize="24" FontAttributes="Bold" />
+
+        <Label x:Name="TotalGeneralLabel" FontSize="20" Text="Total general: $0.00" />
+
+        <ListView x:Name="ResumenListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="{Binding Categoria}" FontSize="18" />
+                            <Label Text="{Binding Cantidad, StringFormat=' ({0} gastos)'}" />
+                            <Label Text="{Binding Total, StringFormat=' ${0:F2}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+
+</ContentPage>
